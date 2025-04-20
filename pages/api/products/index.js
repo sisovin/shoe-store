@@ -8,13 +8,14 @@ export default async function handler(req, res) {
   switch (method) {
     case 'GET':
       try {
-        const { category, brand, size, color } = req.query;
+        const { category, brand, size, color, discount } = req.query;
 
         const filters = {};
         if (category) filters.category = category;
         if (brand) filters.brand = brand;
         if (size) filters.size = size;
         if (color) filters.color = color;
+        if (discount) filters.discount = parseFloat(discount);
 
         const products = await prisma.product.findMany({
           where: filters,
