@@ -116,6 +116,13 @@ export default function AdminDashboard() {
         />
         {errors.stock && <p className="error">{errors.stock.message}</p>}
 
+        <input
+          type="number"
+          placeholder="Discount"
+          {...register('discount', { required: 'Discount is required', min: 0, max: 100 })}
+        />
+        {errors.discount && <p className="error">{errors.discount.message}</p>}
+
         <button type="submit">
           {editingProduct ? 'Update Product' : 'Add Product'}
         </button>
