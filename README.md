@@ -1,2 +1,1 @@
-# shoe-store
-A repository for a shoe e-commerce project
+This repository is empty. Any task executed on it should be considered a new capability and needs to be created.
